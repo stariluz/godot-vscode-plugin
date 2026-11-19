@@ -20,11 +20,7 @@ import * as os from "node:os";
 
 function get_fgvm_home(): string {
 	const env = process.env.FGVM_HOME;
-	if (env) {
-		// fgvm creates a "fgvm" subdirectory inside FGVM_HOME
-		return path.join(env, "fgvm");
-	}
-	return path.join(os.homedir(), "fgvm");
+	return env? env : path.join(os.homedir(), "fgvm");
 }
 
 /**
