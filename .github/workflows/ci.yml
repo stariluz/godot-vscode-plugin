@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        godot_version: ["4.7", "4.5.1"]
+        godot_version: ["4.7.2", "4.5.1"]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
